@@ -1,0 +1,3684 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/pkgcloud/pkgcloud#readme">pkgcloud (v1.4.0)</a>
+</h1>
+<h4>An infrastructure-as-a-service agnostic cloud library for node.js</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud">module pkgcloud</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>base.Client
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>base.Model
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Flavor">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Flavor
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Image
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Server
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>storage.Container
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File">
+            function <span class="apidocSignatureSpan">pkgcloud.</span>storage.File
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>_base</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>_common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>_compute</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>_storage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>base</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>base.Client.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>base.Client.super_.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>base.Model.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>blockstorage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>cdn</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>compute</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>compute.Flavor.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>compute.Image.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>compute.Server.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>database</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>dns</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>loadbalancer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>network</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>orchestration</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>providers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>storage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>storage.Container.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.</span>storage.File.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pkgcloud.</span>version</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base">module pkgcloud.base</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client">
+            function <span class="apidocSignatureSpan">pkgcloud.base.</span>Client
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model">
+            function <span class="apidocSignatureSpan">pkgcloud.base.</span>Model
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base.Client">module pkgcloud.base.Client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.Client">
+            function <span class="apidocSignatureSpan">pkgcloud.base.</span>Client
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.</span>super_
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base.Client.prototype">module pkgcloud.base.Client.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.prototype._defaultRequestHandler">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_defaultRequestHandler
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.prototype._parseError">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_parseError
+            <span class="apidocSignatureSpan">(response, body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.prototype._request">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_request
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.prototype.getUserAgent">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>getUserAgent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.prototype.setCustomUserAgent">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>setCustomUserAgent
+            <span class="apidocSignatureSpan">(userAgent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base.Client.super_.prototype">module pkgcloud.base.Client.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.addListener">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.emit">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>emit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.listeners">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>listeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.listenersAny">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>listenersAny
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.many">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>many
+            <span class="apidocSignatureSpan">(event, ttl, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.off">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>off
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.offAny">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>offAny
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.on">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.onAny">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>onAny
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.once">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>once
+            <span class="apidocSignatureSpan">(event, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.removeAllListeners">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(type)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.removeListener">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Client.super_.prototype.setMaxListeners">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>setMaxListeners
+            <span class="apidocSignatureSpan">(n)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>delimiter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>event</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base.Model">module pkgcloud.base.Model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model.Model">
+            function <span class="apidocSignatureSpan">pkgcloud.base.</span>Model
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Model.</span>super_
+            <span class="apidocSignatureSpan">(conf)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.base.Model.prototype">module pkgcloud.base.Model.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model.prototype.clearWait">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>clearWait
+            <span class="apidocSignatureSpan">(intervalId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model.prototype.setWait">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>setWait
+            <span class="apidocSignatureSpan">(attributes, interval, timeLimit, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.base.Model.prototype.until">
+            function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>until
+            <span class="apidocSignatureSpan">(attributes, interval, timeLimit, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.blockstorage">module pkgcloud.blockstorage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.blockstorage.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.blockstorage.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.cdn">module pkgcloud.cdn</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.cdn.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.cdn.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute">module pkgcloud.compute</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Flavor">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Flavor
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Image
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Server
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.isPrivate">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>isPrivate
+            <span class="apidocSignatureSpan">(addr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.isPublic">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>isPublic
+            <span class="apidocSignatureSpan">(addr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.serverIp">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>serverIp
+            <span class="apidocSignatureSpan">(server, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.serverPass">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>serverPass
+            <span class="apidocSignatureSpan">(server)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Flavor">module pkgcloud.compute.Flavor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Flavor.Flavor">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Flavor
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Flavor.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Flavor.</span>super_
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Flavor.prototype">module pkgcloud.compute.Flavor.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Flavor.prototype.refresh">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Flavor.prototype.</span>refresh
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Image">module pkgcloud.compute.Image</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image.Image">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Image
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Image.</span>super_
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Image.prototype">module pkgcloud.compute.Image.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image.prototype.create">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>create
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image.prototype.destroy">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Image.prototype.refresh">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>refresh
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Server">module pkgcloud.compute.Server</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.Server">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Server
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.</span>super_
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.compute.Server.prototype">module pkgcloud.compute.Server.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.prototype.create">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>create
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.prototype.destroy">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.prototype.reboot">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>reboot
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.prototype.refresh">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>refresh
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.compute.Server.prototype.resize">
+            function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>resize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>STATUS</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.database">module pkgcloud.database</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.database.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.database.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.dns">module pkgcloud.dns</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.dns.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.dns.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.loadbalancer">module pkgcloud.loadbalancer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.loadbalancer.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.loadbalancer.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.network">module pkgcloud.network</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.network.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.network.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.orchestration">module pkgcloud.orchestration</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.orchestration.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.orchestration.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.storage">module pkgcloud.storage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.</span>Container
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.</span>File
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.createClient">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.</span>createClient
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.storage.Container">module pkgcloud.storage.Container</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.Container">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.</span>Container
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.</span>super_
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.storage.Container.prototype">module pkgcloud.storage.Container.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.create">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>create
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.destroy">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>destroy
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.getFiles">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>getFiles
+            <span class="apidocSignatureSpan">(download, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.refresh">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>refresh
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.removeFile">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>removeFile
+            <span class="apidocSignatureSpan">(file, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.Container.prototype.upload">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>upload
+            <span class="apidocSignatureSpan">(file, local, options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.storage.File">module pkgcloud.storage.File</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File.File">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.</span>File
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File.super_">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.File.</span>super_
+            <span class="apidocSignatureSpan">(client, details)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.pkgcloud.storage.File.prototype">module pkgcloud.storage.File.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File.prototype.download">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.File.prototype.</span>download
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.pkgcloud.storage.File.prototype.remove">
+            function <span class="apidocSignatureSpan">pkgcloud.storage.File.prototype.</span>remove
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud" id="apidoc.module.pkgcloud">module pkgcloud</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client" id="apidoc.element.pkgcloud.base.Client">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>base.Client
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base.Client = function (options) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.config = options || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model" id="apidoc.element.pkgcloud.base.Model">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>base.Model
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base.Model = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Flavor" id="apidoc.element.pkgcloud.compute.Flavor">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Flavor
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compute.Flavor = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image" id="apidoc.element.pkgcloud.compute.Image">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Image
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compute.Image = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server" id="apidoc.element.pkgcloud.compute.Server">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>compute.Server
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compute.Server = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container" id="apidoc.element.pkgcloud.storage.Container">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>storage.Container
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">storage.Container = function (client, details) {
+  this.files = [];
+
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File" id="apidoc.element.pkgcloud.storage.File">
+        function <span class="apidocSignatureSpan">pkgcloud.</span>storage.File
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">storage.File = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base" id="apidoc.module.pkgcloud.base">module pkgcloud.base</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client" id="apidoc.element.pkgcloud.base.Client">
+        function <span class="apidocSignatureSpan">pkgcloud.base.</span>Client
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client = function (options) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.config = options || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model" id="apidoc.element.pkgcloud.base.Model">
+        function <span class="apidocSignatureSpan">pkgcloud.base.</span>Model
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Model = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base.Client" id="apidoc.module.pkgcloud.base.Client">module pkgcloud.base.Client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.Client" id="apidoc.element.pkgcloud.base.Client.Client">
+        function <span class="apidocSignatureSpan">pkgcloud.base.</span>Client
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client = function (options) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.config = options || {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_" id="apidoc.element.pkgcloud.base.Client.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.</span>super_
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter(conf) {
+  this._events = {};
+  this.newListener = false;
+  configure.call(this, conf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base.Client.prototype" id="apidoc.module.pkgcloud.base.Client.prototype">module pkgcloud.base.Client.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.prototype._defaultRequestHandler" id="apidoc.element.pkgcloud.base.Client.prototype._defaultRequestHandler">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_defaultRequestHandler
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_defaultRequestHandler = function (callback) {
+
+  var self = this;
+
+  return function (err, res, body) {
+    if (err) {
+      return callback(err);
+    }
+
+    var err2 = self._parseError(res, body);
+
+    if (err2) {
+      self.emit('log::error', 'Error during provider response', err2);
+      return callback(errs.create(err2));
+    }
+
+    self.emit('log::trace', 'Provider Response', {
+      href: res.request.uri.href,
+      method: res.request.method,
+      headers: res.headers,
+      statusCode: res.statusCode
+    });
+
+    callback(err, body, res);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.prototype._parseError" id="apidoc.element.pkgcloud.base.Client.prototype._parseError">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_parseError
+        <span class="apidocSignatureSpan">(response, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_parseError = function (response, body) {
+  var self = this,
+    statusCode = response.statusCode.toString(),
+    err;
+
+  if (Object.keys(self.failCodes).indexOf(statusCode) !== -1) {
+    //
+    // TODO: Support more than JSON errors here
+    //
+    err = {
+      provider: self.provider,
+      failCode: self.failCodes[statusCode],
+      statusCode: response.statusCode,
+      message: self.provider + ' Error (' +
+        statusCode + '): ' + self.failCodes[statusCode],
+      href: response.request.uri.href,
+      method: response.request.method,
+      headers: response.headers
+    };
+
+    if (body) {
+      try {
+        err.result = typeof body === 'string' ? JSON.parse(body) : body;
+      } catch (e) {
+        err.result = { err: body };
+      }
+    }
+  }
+
+  return err;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.prototype._request" id="apidoc.element.pkgcloud.base.Client.prototype._request">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>_request
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_request = function (options, callback) {
+  var self = this;
+  var requestOptions = {};
+
+  requestOptions.method = options.method || 'GET';
+  requestOptions.headers = options.headers || {};
+  requestOptions.path = options.path;
+  requestOptions.strictSSL = typeof self.config.strictSSL === 'boolean'
+    ? self.config.strictSSL : true;
+
+  if (options.qs) {
+    requestOptions.qs = options.qs;
+  }
+
+  if (options.body) {
+    requestOptions.body = options.body;
+  }
+
+  if (options.container) {
+    requestOptions.signingUrl = '/' + options.container + '/';
+
+    if (options.path) {
+      requestOptions.signingUrl += options.path;
+    }
+
+    if (options.qs) {
+      requestOptions.signingUrl += '?' + qs.stringify(options.qs);
+    }
+  }
+
+  function sendRequest(opts) {
+
+    //
+    // Setup any specific request options before
+    // making the request
+    //
+    if (self.before) {
+      var errors = false;
+      for (var i = 0; i &lt; self.before.length; i++) {
+        var fn = self.before[i];
+        try {
+          opts = fn.call(self, opts) || opts;
+          // on errors do error handling, break.
+        } catch (exc) {
+          errs.handle(exc, callback);
+          errors = true;
+          break;
+        }
+      }
+      if (errors) {
+        return;
+      }
+    }
+
+    opts.uri = options.uri || self._getUrl(options);
+
+    // Clean up our polluted options
+    //
+    // TODO refactor the options used in Before methods
+    // to not require polluting request options
+    //
+    delete opts.path;
+    delete opts.signingUrl;
+
+    // Set our User Agent
+    opts.headers['User-Agent'] = self.getUserAgent();
+
+    // If we are missing callback
+    if (!callback) {
+      try {
+        self.emit('log::trace', 'Sending (non-callback) client request', opts);
+        return request(opts);
+      } // if request throws still return an EE
+      catch (exc1) {
+        self.emit('log::trace', 'Unable to create (non-callback) request', opts);
+        return errs.handle(exc1);
+      }
+    } else {
+      try {
+        self.emit('log::trace', 'Sending client request', opts);
+        self.emit('log::debug', opts.method + ': ' + opts.uri);
+        return request(opts, self._defaultRequestHandler(callback));
+      } catch (exc2) {
+        self.emit('log::error', 'Unable to create request', opts);
+        return errs.handle(exc2, callback);
+      }
+    }
+  }
+
+  return sendRequest(requestOptions);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.prototype.getUserAgent" id="apidoc.element.pkgcloud.base.Client.prototype.getUserAgent">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>getUserAgent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getUserAgent = function () {
+  return util.format('%snodejs-pkgcloud/%s', this._customUserAgent ?
+    this._customUserAgent + ' ' : '', pkgcloud.version);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+In our [Roadmap](#roadmap), we plan to add support for more services, such as Queueing, Monitoring, and more. Additionally, we plan
+ to implement more providers for the *beta* services, thus moving them out of *beta*.
+
+### User Agent
+
+By default, all pkgcloud HTTP requests will have a user agent with the library and version: `nodejs-pkgcloud/x.y.z` where `x.y.z
+` is the current version.
+
+You can get this from a client at any time by calling `client.<span class="apidocCodeKeywordSpan">getUserAgent</span>();`. Some
+providers may have an additional suffix as a function of the underlying HTTP stacks.
+
+You can also set a custom User Agent prefix:
+
+```javascript
+client.setCustomUserAgent('my-app/1.2.3');
+
+// returns "my-app/1.2.3 nodejs-pkgcloud/1.1.0"
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.prototype.setCustomUserAgent" id="apidoc.element.pkgcloud.base.Client.prototype.setCustomUserAgent">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.prototype.</span>setCustomUserAgent
+        <span class="apidocSignatureSpan">(userAgent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setCustomUserAgent = function (userAgent) {
+  this._customUserAgent = userAgent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+By default, all pkgcloud HTTP requests will have a user agent with the library and version: `nodejs-pkgcloud/x.y.z` where `x.y.z
+` is the current version.
+
+You can get this from a client at any time by calling `client.getUserAgent();`. Some providers may have an additional suffix as
+a function of the underlying HTTP stacks.
+
+You can also set a custom User Agent prefix:
+
+```javascript
+client.<span class="apidocCodeKeywordSpan">setCustomUserAgent</span>('my-app/1.2.3');
+
+// returns "my-app/1.2.3 nodejs-pkgcloud/1.1.0"
+client.getUserAgent();
+```
+
+&lt;a name="basic-apis"&gt;&lt;/a&gt;
+### Basic APIs for pkgcloud
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base.Client.super_.prototype" id="apidoc.module.pkgcloud.base.Client.super_.prototype">module pkgcloud.base.Client.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.addListener" id="apidoc.element.pkgcloud.base.Client.super_.prototype.addListener">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (type, listener) {
+
+  if (typeof type === 'function') {
+    this.onAny(type);
+    return this;
+  }
+
+  if (typeof listener !== 'function') {
+    throw new Error('on only accepts instances of Function');
+  }
+  this._events || init.call(this);
+
+  // To avoid recursion in the case that type == "newListeners"! Before
+  // adding it to the listeners, first emit "newListeners".
+  this.emit('newListener', type, listener);
+
+  if(this.wildcard) {
+    growListenerTree.call(this, type, listener);
+    return this;
+  }
+
+  if (!this._events[type]) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    this._events[type] = listener;
+  }
+  else if(typeof this._events[type] === 'function') {
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+  }
+  else if (isArray(this._events[type])) {
+    // If we've already got an array, just append.
+    this._events[type].push(listener);
+
+    // Check for listener leak
+    if (!this._events[type].warned) {
+
+      var m = defaultMaxListeners;
+
+      if (typeof this._events.maxListeners !== 'undefined') {
+        m = this._events.maxListeners;
+      }
+
+      if (m &gt; 0 &amp;&amp; this._events[type].length &gt; m) {
+
+        this._events[type].warned = true;
+        console.error('(node) warning: possible EventEmitter memory ' +
+                      'leak detected. %d listeners added. ' +
+                      'Use emitter.setMaxListeners() to increase limit.',
+                      this._events[type].length);
+        console.trace();
+      }
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.emit" id="apidoc.element.pkgcloud.base.Client.super_.prototype.emit">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>emit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function () {
+
+  this._events || init.call(this);
+
+  var type = arguments[0];
+
+  if (type === 'newListener' &amp;&amp; !this.newListener) {
+    if (!this._events.newListener) { return false; }
+  }
+
+  // Loop through the *_all* functions and invoke them.
+  if (this._all) {
+    var l = arguments.length;
+    var args = new Array(l - 1);
+    for (var i = 1; i &lt; l; i++) args[i - 1] = arguments[i];
+    for (i = 0, l = this._all.length; i &lt; l; i++) {
+      this.event = type;
+      this._all[i].apply(this, args);
+    }
+  }
+
+  // If there is no 'error' event listener then throw.
+  if (type === 'error') {
+
+    if (!this._all &amp;&amp;
+      !this._events.error &amp;&amp;
+      !(this.wildcard &amp;&amp; this.listenerTree.error)) {
+
+      if (arguments[1] instanceof Error) {
+        throw arguments[1]; // Unhandled 'error' event
+      } else {
+        throw new Error("Uncaught, unspecified 'error' event.");
+      }
+      return false;
+    }
+  }
+
+  var handler;
+
+  if(this.wildcard) {
+    handler = [];
+    var ns = typeof type === 'string' ? type.split(this.delimiter) : type.slice();
+    searchListenerTree.call(this, handler, ns, this.listenerTree, 0);
+  }
+  else {
+    handler = this._events[type];
+  }
+
+  if (typeof handler === 'function') {
+    this.event = type;
+    if (arguments.length === 1) {
+      handler.call(this);
+    }
+    else if (arguments.length &gt; 1)
+      switch (arguments.length) {
+        case 2:
+          handler.call(this, arguments[1]);
+          break;
+        case 3:
+          handler.call(this, arguments[1], arguments[2]);
+          break;
+        // slower
+        default:
+          var l = arguments.length;
+          var args = new Array(l - 1);
+          for (var i = 1; i &lt; l; i++) args[i - 1] = arguments[i];
+          handler.apply(this, args);
+      }
+    return true;
+  }
+  else if (handler) {
+    var l = arguments.length;
+    var args = new Array(l - 1);
+    for (var i = 1; i &lt; l; i++) args[i - 1] = arguments[i];
+
+    var listeners = handler.slice();
+    for (var i = 0, l = listeners.length; i &lt; l; i++) {
+      this.event = type;
+      listeners[i].apply(this, args);
+    }
+    return (listeners.length &gt; 0) || !!this._all;
+  }
+  else {
+    return !!this._all;
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.listeners" id="apidoc.element.pkgcloud.base.Client.super_.prototype.listeners">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>listeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listeners = function (type) {
+  if(this.wildcard) {
+    var handlers = [];
+    var ns = typeof type === 'string' ? type.split(this.delimiter) : type.slice();
+    searchListenerTree.call(this, handlers, ns, this.listenerTree, 0);
+    return handlers;
+  }
+
+  this._events || init.call(this);
+
+  if (!this._events[type]) this._events[type] = [];
+  if (!isArray(this._events[type])) {
+    this._events[type] = [this._events[type]];
+  }
+  return this._events[type];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.listenersAny" id="apidoc.element.pkgcloud.base.Client.super_.prototype.listenersAny">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>listenersAny
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listenersAny = function () {
+
+  if(this._all) {
+    return this._all;
+  }
+  else {
+    return [];
+  }
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.many" id="apidoc.element.pkgcloud.base.Client.super_.prototype.many">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>many
+        <span class="apidocSignatureSpan">(event, ttl, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">many = function (event, ttl, fn) {
+  var self = this;
+
+  if (typeof fn !== 'function') {
+    throw new Error('many only accepts instances of Function');
+  }
+
+  function listener() {
+    if (--ttl === 0) {
+      self.off(event, listener);
+    }
+    fn.apply(this, arguments);
+  }
+
+  listener._origin = fn;
+
+  this.on(event, listener);
+
+  return self;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.off" id="apidoc.element.pkgcloud.base.Client.super_.prototype.off">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>off
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (type, listener) {
+  if (typeof listener !== 'function') {
+    throw new Error('removeListener only takes instances of Function');
+  }
+
+  var handlers,leafs=[];
+
+  if(this.wildcard) {
+    var ns = typeof type === 'string' ? type.split(this.delimiter) : type.slice();
+    leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+  }
+  else {
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (!this._events[type]) return this;
+    handlers = this._events[type];
+    leafs.push({_listeners:handlers});
+  }
+
+  for (var iLeaf=0; iLeaf&lt;leafs.length; iLeaf++) {
+    var leaf = leafs[iLeaf];
+    handlers = leaf._listeners;
+    if (isArray(handlers)) {
+
+      var position = -1;
+
+      for (var i = 0, length = handlers.length; i &lt; length; i++) {
+        if (handlers[i] === listener ||
+          (handlers[i].listener &amp;&amp; handlers[i].listener === listener) ||
+          (handlers[i]._origin &amp;&amp; handlers[i]._origin === listener)) {
+          position = i;
+          break;
+        }
+      }
+
+      if (position &lt; 0) {
+        continue;
+      }
+
+      if(this.wildcard) {
+        leaf._listeners.splice(position, 1);
+      }
+      else {
+        this._events[type].splice(position, 1);
+      }
+
+      if (handlers.length === 0) {
+        if(this.wildcard) {
+          delete leaf._listeners;
+        }
+        else {
+          delete this._events[type];
+        }
+      }
+      return this;
+    }
+    else if (handlers === listener ||
+      (handlers.listener &amp;&amp; handlers.listener === listener) ||
+      (handlers._origin &amp;&amp; handlers._origin === listener)) {
+      if(this.wildcard) {
+        delete leaf._listeners;
+      }
+      else {
+        delete this._events[type];
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.offAny" id="apidoc.element.pkgcloud.base.Client.super_.prototype.offAny">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>offAny
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">offAny = function (fn) {
+  var i = 0, l = 0, fns;
+  if (fn &amp;&amp; this._all &amp;&amp; this._all.length &gt; 0) {
+    fns = this._all;
+    for(i = 0, l = fns.length; i &lt; l; i++) {
+      if(fn === fns[i]) {
+        fns.splice(i, 1);
+        return this;
+      }
+    }
+  } else {
+    this._all = [];
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.on" id="apidoc.element.pkgcloud.base.Client.super_.prototype.on">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, listener) {
+
+  if (typeof type === 'function') {
+    this.onAny(type);
+    return this;
+  }
+
+  if (typeof listener !== 'function') {
+    throw new Error('on only accepts instances of Function');
+  }
+  this._events || init.call(this);
+
+  // To avoid recursion in the case that type == "newListeners"! Before
+  // adding it to the listeners, first emit "newListeners".
+  this.emit('newListener', type, listener);
+
+  if(this.wildcard) {
+    growListenerTree.call(this, type, listener);
+    return this;
+  }
+
+  if (!this._events[type]) {
+    // Optimize the case of one listener. Don't need the extra array object.
+    this._events[type] = listener;
+  }
+  else if(typeof this._events[type] === 'function') {
+    // Adding the second element, need to change to array.
+    this._events[type] = [this._events[type], listener];
+  }
+  else if (isArray(this._events[type])) {
+    // If we've already got an array, just append.
+    this._events[type].push(listener);
+
+    // Check for listener leak
+    if (!this._events[type].warned) {
+
+      var m = defaultMaxListeners;
+
+      if (typeof this._events.maxListeners !== 'undefined') {
+        m = this._events.maxListeners;
+      }
+
+      if (m &gt; 0 &amp;&amp; this._events[type].length &gt; m) {
+
+        this._events[type].warned = true;
+        console.error('(node) warning: possible EventEmitter memory ' +
+                      'leak detected. %d listeners added. ' +
+                      'Use emitter.setMaxListeners() to increase limit.',
+                      this._events[type].length);
+        console.trace();
+      }
+    }
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var readStream = fs.createReadStream('a-file.txt');
+var writeStream = client.upload({
+  container: 'a-container',
+  remote: 'remote-file-name.txt'
+});
+
+writeStream.<span class="apidocCodeKeywordSpan">on</span>('error', function(err) {
+  // handle your error case
+});
+
+writeStream.on('success', function(file) {
+  // success, file will be a File model
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.onAny" id="apidoc.element.pkgcloud.base.Client.super_.prototype.onAny">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>onAny
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onAny = function (fn) {
+
+  if (typeof fn !== 'function') {
+    throw new Error('onAny only accepts instances of Function');
+  }
+
+  if(!this._all) {
+    this._all = [];
+  }
+
+  // Add the function to the event listener collection.
+  this._all.push(fn);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.once" id="apidoc.element.pkgcloud.base.Client.super_.prototype.once">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>once
+        <span class="apidocSignatureSpan">(event, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (event, fn) {
+  this.many(event, 1, fn);
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.removeAllListeners" id="apidoc.element.pkgcloud.base.Client.super_.prototype.removeAllListeners">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(type)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeAllListeners = function (type) {
+  if (arguments.length === 0) {
+    !this._events || init.call(this);
+    return this;
+  }
+
+  if(this.wildcard) {
+    var ns = typeof type === 'string' ? type.split(this.delimiter) : type.slice();
+    var leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+
+    for (var iLeaf=0; iLeaf&lt;leafs.length; iLeaf++) {
+      var leaf = leafs[iLeaf];
+      leaf._listeners = null;
+    }
+  }
+  else {
+    if (!this._events[type]) return this;
+    this._events[type] = null;
+  }
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.removeListener" id="apidoc.element.pkgcloud.base.Client.super_.prototype.removeListener">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (type, listener) {
+  if (typeof listener !== 'function') {
+    throw new Error('removeListener only takes instances of Function');
+  }
+
+  var handlers,leafs=[];
+
+  if(this.wildcard) {
+    var ns = typeof type === 'string' ? type.split(this.delimiter) : type.slice();
+    leafs = searchListenerTree.call(this, null, ns, this.listenerTree, 0);
+  }
+  else {
+    // does not use listeners(), so no side effect of creating _events[type]
+    if (!this._events[type]) return this;
+    handlers = this._events[type];
+    leafs.push({_listeners:handlers});
+  }
+
+  for (var iLeaf=0; iLeaf&lt;leafs.length; iLeaf++) {
+    var leaf = leafs[iLeaf];
+    handlers = leaf._listeners;
+    if (isArray(handlers)) {
+
+      var position = -1;
+
+      for (var i = 0, length = handlers.length; i &lt; length; i++) {
+        if (handlers[i] === listener ||
+          (handlers[i].listener &amp;&amp; handlers[i].listener === listener) ||
+          (handlers[i]._origin &amp;&amp; handlers[i]._origin === listener)) {
+          position = i;
+          break;
+        }
+      }
+
+      if (position &lt; 0) {
+        continue;
+      }
+
+      if(this.wildcard) {
+        leaf._listeners.splice(position, 1);
+      }
+      else {
+        this._events[type].splice(position, 1);
+      }
+
+      if (handlers.length === 0) {
+        if(this.wildcard) {
+          delete leaf._listeners;
+        }
+        else {
+          delete this._events[type];
+        }
+      }
+      return this;
+    }
+    else if (handlers === listener ||
+      (handlers.listener &amp;&amp; handlers.listener === listener) ||
+      (handlers._origin &amp;&amp; handlers._origin === listener)) {
+      if(this.wildcard) {
+        delete leaf._listeners;
+      }
+      else {
+        delete this._events[type];
+      }
+    }
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Client.super_.prototype.setMaxListeners" id="apidoc.element.pkgcloud.base.Client.super_.prototype.setMaxListeners">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Client.super_.prototype.</span>setMaxListeners
+        <span class="apidocSignatureSpan">(n)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setMaxListeners = function (n) {
+  this._events || init.call(this);
+  this._events.maxListeners = n;
+  if (!this._conf) this._conf = {};
+  this._conf.maxListeners = n;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base.Model" id="apidoc.module.pkgcloud.base.Model">module pkgcloud.base.Model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model.Model" id="apidoc.element.pkgcloud.base.Model.Model">
+        function <span class="apidocSignatureSpan">pkgcloud.base.</span>Model
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Model = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model.super_" id="apidoc.element.pkgcloud.base.Model.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Model.</span>super_
+        <span class="apidocSignatureSpan">(conf)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter(conf) {
+  this._events = {};
+  this.newListener = false;
+  configure.call(this, conf);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.base.Model.prototype" id="apidoc.module.pkgcloud.base.Model.prototype">module pkgcloud.base.Model.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model.prototype.clearWait" id="apidoc.element.pkgcloud.base.Model.prototype.clearWait">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>clearWait
+        <span class="apidocSignatureSpan">(intervalId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function clear(intervalId) {
+  clearInterval(intervalId);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model.prototype.setWait" id="apidoc.element.pkgcloud.base.Model.prototype.setWait">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>setWait
+        <span class="apidocSignatureSpan">(attributes, interval, timeLimit, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setWait(attributes, interval, timeLimit, callback) {
+  if (typeof timeLimit === 'function') {
+    callback  = timeLimit;
+    timeLimit = null;
+  }
+
+  var self  = this,
+      start = Date.now(),
+      fired = false,
+      equalCheckId,
+      current;
+
+  equalCheckId = setInterval(function () {
+    self.refresh(function (err, resource) {
+
+      if (timeLimit) {
+        current = Date.now();
+        if (current - start &gt; timeLimit) {
+          clearInterval(equalCheckId);
+          if (!fired) {
+            fired = true;
+            callback(err, resource);
+            return;
+          }
+        }
+      }
+
+      if (err) {
+        return;
+      } // Ignore errors
+
+      var equal = true,
+          keys  = Object.keys(attributes);
+
+      if (typeof attributes === 'function') {
+        equal = attributes(resource);
+      }
+      else {
+        for (var i = 0; i &lt; keys.length; i++) {
+          if (attributes[keys[i]] !== resource[keys[i]]) {
+            equal = false;
+            break;
+          }
+        }
+      }
+
+      if (equal) {
+        clearInterval(equalCheckId);
+        callback(null, resource);
+      }
+    });
+  }, interval);
+
+  return equalCheckId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.base.Model.prototype.until" id="apidoc.element.pkgcloud.base.Model.prototype.until">
+        function <span class="apidocSignatureSpan">pkgcloud.base.Model.prototype.</span>until
+        <span class="apidocSignatureSpan">(attributes, interval, timeLimit, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setWait(attributes, interval, timeLimit, callback) {
+  if (typeof timeLimit === 'function') {
+    callback  = timeLimit;
+    timeLimit = null;
+  }
+
+  var self  = this,
+      start = Date.now(),
+      fired = false,
+      equalCheckId,
+      current;
+
+  equalCheckId = setInterval(function () {
+    self.refresh(function (err, resource) {
+
+      if (timeLimit) {
+        current = Date.now();
+        if (current - start &gt; timeLimit) {
+          clearInterval(equalCheckId);
+          if (!fired) {
+            fired = true;
+            callback(err, resource);
+            return;
+          }
+        }
+      }
+
+      if (err) {
+        return;
+      } // Ignore errors
+
+      var equal = true,
+          keys  = Object.keys(attributes);
+
+      if (typeof attributes === 'function') {
+        equal = attributes(resource);
+      }
+      else {
+        for (var i = 0; i &lt; keys.length; i++) {
+          if (attributes[keys[i]] !== resource[keys[i]]) {
+            equal = false;
+            break;
+          }
+        }
+      }
+
+      if (equal) {
+        clearInterval(equalCheckId);
+        callback(null, resource);
+      }
+    });
+  }, interval);
+
+  return equalCheckId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.blockstorage" id="apidoc.module.pkgcloud.blockstorage">module pkgcloud.blockstorage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.blockstorage.createClient" id="apidoc.element.pkgcloud.blockstorage.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.blockstorage.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.cdn" id="apidoc.module.pkgcloud.cdn">module pkgcloud.cdn</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.cdn.createClient" id="apidoc.element.pkgcloud.cdn.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.cdn.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute" id="apidoc.module.pkgcloud.compute">module pkgcloud.compute</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Flavor" id="apidoc.element.pkgcloud.compute.Flavor">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Flavor
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Flavor = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image" id="apidoc.element.pkgcloud.compute.Image">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Image
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Image = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server" id="apidoc.element.pkgcloud.compute.Server">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Server
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.createClient" id="apidoc.element.pkgcloud.compute.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.isPrivate" id="apidoc.element.pkgcloud.compute.isPrivate">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>isPrivate
+        <span class="apidocSignatureSpan">(addr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPrivate(addr) {
+  return addr.match(/^10\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})/) != null ||
+    addr.match(/^192\.168\.([0-9]{1,3})\.([0-9]{1,3})/) != null ||
+    addr.match(
+        /^172\.(1[6-9]|2\d|30|31)\.([0-9]{1,3})\.([0-9]{1,3})/) != null ||
+    addr.match(/^127\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})/) != null ||
+    addr.match(/^169\.254\.([0-9]{1,3})\.([0-9]{1,3})/) != null ||
+    addr.match(/^fc00:/) != null || addr.match(/^fe80:/) != null ||
+    addr.match(/^::1$/) != null || addr.match(/^::$/) != null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.isPublic" id="apidoc.element.pkgcloud.compute.isPublic">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>isPublic
+        <span class="apidocSignatureSpan">(addr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isPublic(addr) {
+  return !ip.isPrivate(addr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.serverIp" id="apidoc.element.pkgcloud.compute.serverIp">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>serverIp
+        <span class="apidocSignatureSpan">(server, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serverIp = function (server, options) {
+  if (!server &amp;&amp; !server.ips &amp;&amp; !server.addresses) {
+    return null;
+  }
+
+  options = options || {};
+
+  var isPublic  = options.isPublic  || exports.isPublic,
+      isPrivate = options.isPrivate || exports.isPrivate,
+      interfaces,
+      addresses,
+      pub;
+
+  if (server.ips) {
+    //
+    // Joyent uses the format:
+    // * { ips: ['23.23.23.23', '10.0.0.1'] }
+    // OR
+    // * { ips: ['10.0.0.1', '23.23.23.23'] }
+    //
+    pub = server.ips.filter(function (addr) {
+      return isPublic(addr);
+    });
+
+    return !pub.length
+      ? server.ips[0]
+      : pub[0];
+  }
+  else if (server.addresses.public || server.addresses.private) {
+    //
+    // Rackspace and most sane providers use:
+    //
+    // addresses: {
+    //   public: ['23.23.23.23'],
+    //   private: ['10.0.0.1']
+    // }
+    //
+    // OR
+    //
+    // addresses: {
+    //   public: [],
+    //   private: ['10.0.0.1']
+    // }
+    //
+    return server.addresses.public.length
+      ? server.addresses.public[0]
+      : server.addresses.private[0];
+  }
+  else if (server.addresses) {
+    //
+    // OpenStack uses a non-standard set of names
+    //
+    // addresses: {
+    //   vlan01: [
+    //     { version: 4, addr: '10.0.0.1' }
+    //     { version: 4, addr: '23.23.23.23' }
+    //   ]
+    // }
+    //
+    interfaces = Object.keys(server.addresses);
+    if (!interfaces.length) {
+      return null;
+    }
+
+    addresses = interfaces.reduce(function (all, iface) {
+      server.addresses[iface]
+        .map(function (info) { return info.addr })
+        .filter(Boolean)
+        .forEach(function (addr) {
+          if (isPublic(addr)) {
+            all['public'].push(addr);
+          }
+          else if (isPrivate(addr)) {
+            all['private'].push(addr);
+          }
+        });
+
+      return all;
+    }, { public: [], private: [] });
+
+    return addresses['public'][0]
+      || addresses['private'][0]
+      || null;
+  }
+
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.serverPass" id="apidoc.element.pkgcloud.compute.serverPass">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>serverPass
+        <span class="apidocSignatureSpan">(server)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">serverPass = function (server) {
+  if (server.adminPass) {
+    return server.adminPass;
+  }
+  else if (server.metadata) {
+    return server.metadata['root'];
+  }
+
+  return '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Flavor" id="apidoc.module.pkgcloud.compute.Flavor">module pkgcloud.compute.Flavor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Flavor.Flavor" id="apidoc.element.pkgcloud.compute.Flavor.Flavor">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Flavor
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Flavor = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Flavor.super_" id="apidoc.element.pkgcloud.compute.Flavor.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Flavor.</span>super_
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Flavor.prototype" id="apidoc.module.pkgcloud.compute.Flavor.prototype">module pkgcloud.compute.Flavor.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Flavor.prototype.refresh" id="apidoc.element.pkgcloud.compute.Flavor.prototype.refresh">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Flavor.prototype.</span>refresh
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refresh = function (callback) {
+  return this.client.getFlavor(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Image" id="apidoc.module.pkgcloud.compute.Image">module pkgcloud.compute.Image</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image.Image" id="apidoc.element.pkgcloud.compute.Image.Image">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Image
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Image = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image.super_" id="apidoc.element.pkgcloud.compute.Image.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Image.</span>super_
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Image.prototype" id="apidoc.module.pkgcloud.compute.Image.prototype">module pkgcloud.compute.Image.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image.prototype.create" id="apidoc.element.pkgcloud.compute.Image.prototype.create">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>create
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (callback) {
+  return this.client.createImage(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* **MySQL**
+  * [Rackspace](docs/providers/rackspace/databases.md)
+* **Azure Tables**
+  * [Azure](docs/providers/azure.md#database)
+
+Due to the various differences in how these DBaaS providers provision databases only a small surface area of the API for instances
+ of `pkgcloud.database.Client` returned from `pkgcloud.database.createClient` is consistent across all providers:
+
+* `client.<span class="apidocCodeKeywordSpan">create</span>(options, callback)`
+
+All of the individual methods are documented for each DBaaS provider listed above.
+
+## DNS -- Beta
+
+##### Note: DNS is considered Beta until there are multiple providers; presently only Rackspace are supported.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image.prototype.destroy" id="apidoc.element.pkgcloud.compute.Image.prototype.destroy">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (callback) {
+  return this.client.destroyImage(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Image.prototype.refresh" id="apidoc.element.pkgcloud.compute.Image.prototype.refresh">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Image.prototype.</span>refresh
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refresh = function (callback) {
+  return this.client.getImage(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Server" id="apidoc.module.pkgcloud.compute.Server">module pkgcloud.compute.Server</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.Server" id="apidoc.element.pkgcloud.compute.Server.Server">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.</span>Server
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Server = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.super_" id="apidoc.element.pkgcloud.compute.Server.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.</span>super_
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.compute.Server.prototype" id="apidoc.module.pkgcloud.compute.Server.prototype">module pkgcloud.compute.Server.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.prototype.create" id="apidoc.element.pkgcloud.compute.Server.prototype.create">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>create
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (callback) {
+  return this.client.createServer(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* **MySQL**
+  * [Rackspace](docs/providers/rackspace/databases.md)
+* **Azure Tables**
+  * [Azure](docs/providers/azure.md#database)
+
+Due to the various differences in how these DBaaS providers provision databases only a small surface area of the API for instances
+ of `pkgcloud.database.Client` returned from `pkgcloud.database.createClient` is consistent across all providers:
+
+* `client.<span class="apidocCodeKeywordSpan">create</span>(options, callback)`
+
+All of the individual methods are documented for each DBaaS provider listed above.
+
+## DNS -- Beta
+
+##### Note: DNS is considered Beta until there are multiple providers; presently only Rackspace are supported.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.prototype.destroy" id="apidoc.element.pkgcloud.compute.Server.prototype.destroy">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (callback) {
+  return this.client.destroyServer(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.prototype.reboot" id="apidoc.element.pkgcloud.compute.Server.prototype.reboot">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>reboot
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reboot = function (callback) {
+  return this.client.rebootServer(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.prototype.refresh" id="apidoc.element.pkgcloud.compute.Server.prototype.refresh">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>refresh
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refresh = function (callback) {
+  var self = this;
+  return self.client.getServer(this, function (err, server) {
+    if (!err) {
+      self._setProperties(server.original);
+    }
+
+    return callback.apply(this, arguments);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.compute.Server.prototype.resize" id="apidoc.element.pkgcloud.compute.Server.prototype.resize">
+        function <span class="apidocSignatureSpan">pkgcloud.compute.Server.prototype.</span>resize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resize = function () {
+  var args = [this].concat(Array.prototype.slice.call(arguments));
+  this.client.resizeServer.apply(this.client, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.database" id="apidoc.module.pkgcloud.database">module pkgcloud.database</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.database.createClient" id="apidoc.element.pkgcloud.database.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.database.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.dns" id="apidoc.module.pkgcloud.dns">module pkgcloud.dns</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.dns.createClient" id="apidoc.element.pkgcloud.dns.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.dns.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.loadbalancer" id="apidoc.module.pkgcloud.loadbalancer">module pkgcloud.loadbalancer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.loadbalancer.createClient" id="apidoc.element.pkgcloud.loadbalancer.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.loadbalancer.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.network" id="apidoc.module.pkgcloud.network">module pkgcloud.network</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.network.createClient" id="apidoc.element.pkgcloud.network.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.network.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.orchestration" id="apidoc.module.pkgcloud.orchestration">module pkgcloud.orchestration</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.orchestration.createClient" id="apidoc.element.pkgcloud.orchestration.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.orchestration.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.storage" id="apidoc.module.pkgcloud.storage">module pkgcloud.storage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container" id="apidoc.element.pkgcloud.storage.Container">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.</span>Container
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Container = function (client, details) {
+  this.files = [];
+
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File" id="apidoc.element.pkgcloud.storage.File">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.</span>File
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">File = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.createClient" id="apidoc.element.pkgcloud.storage.createClient">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.</span>createClient
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createClient = function (options) {
+  if (!options.provider) {
+    throw new Error('options.provider is required to create a new pkgcloud client.');
+  }
+
+  var provider = pkgcloud.providers[options.provider];
+
+  if (!provider) {
+    throw new Error(options.provider + ' is not a supported provider');
+  }
+
+  if (!provider[service]) {
+    throw new Error(options.provider + ' does not expose a ' + service + ' service');
+  }
+
+  return new provider[service].createClient(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Basic APIs for pkgcloud
+
+Services provided by `pkgcloud` are exposed in two ways:
+
+* **By service type:** For example, if you wanted to create an API client to communicate with a compute service you could simply
+:
+
+``` js
+  var client = require('pkgcloud').compute.<span class="apidocCodeKeywordSpan">createClient</span>({
+//
+// The name of the provider (e.g. "joyent")
+//
+provider: 'provider-name',
+
+//
+// ... Provider specific credentials
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.storage.Container" id="apidoc.module.pkgcloud.storage.Container">module pkgcloud.storage.Container</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.Container" id="apidoc.element.pkgcloud.storage.Container.Container">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.</span>Container
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Container = function (client, details) {
+  this.files = [];
+
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.super_" id="apidoc.element.pkgcloud.storage.Container.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.</span>super_
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.storage.Container.prototype" id="apidoc.module.pkgcloud.storage.Container.prototype">module pkgcloud.storage.Container.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.create" id="apidoc.element.pkgcloud.storage.Container.prototype.create">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>create
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (callback) {
+  this.client.createContainer(this.name, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* **MySQL**
+  * [Rackspace](docs/providers/rackspace/databases.md)
+* **Azure Tables**
+  * [Azure](docs/providers/azure.md#database)
+
+Due to the various differences in how these DBaaS providers provision databases only a small surface area of the API for instances
+ of `pkgcloud.database.Client` returned from `pkgcloud.database.createClient` is consistent across all providers:
+
+* `client.<span class="apidocCodeKeywordSpan">create</span>(options, callback)`
+
+All of the individual methods are documented for each DBaaS provider listed above.
+
+## DNS -- Beta
+
+##### Note: DNS is considered Beta until there are multiple providers; presently only Rackspace are supported.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.destroy" id="apidoc.element.pkgcloud.storage.Container.prototype.destroy">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>destroy
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function (callback) {
+  this.client.destroyContainer(this.name, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.getFiles" id="apidoc.element.pkgcloud.storage.Container.prototype.getFiles">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>getFiles
+        <span class="apidocSignatureSpan">(download, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getFiles = function (download, callback) {
+  var self = this;
+
+  // download can be omitted: (...).getFiles(callback);
+  // In this case first argument will be a function
+  if (typeof download === 'function' &amp;&amp; !(download instanceof RegExp)) {
+    callback = download;
+    download = false;
+  }
+
+  this.client.getFiles(this.name, download, function (err, files) {
+    if (err) {
+      return callback(err);
+    }
+
+    self.files = files;
+    callback(null, files);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `client.createContainer(options, function (err, container) { })`
+* `client.destroyContainer(containerName, function (err) { })`
+* `client.getContainer(containerName, function (err, container) { })`
+
+### File
+* `client.upload(options)`
+* `client.download(options, function (err) { })`
+* `client.<span class="apidocCodeKeywordSpan">getFiles</span>(container, function (err, files) { })`
+* `client.getFile(container, file, function (err, server) { })`
+* `client.removeFile(container, file, function (err) { })`
+
+Both the `.upload(options)` and `.download(options)` have had **careful attention paid to make sure they are pipe and stream capable
+:**
+
+### Upload a File
+``` js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.refresh" id="apidoc.element.pkgcloud.storage.Container.prototype.refresh">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>refresh
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">refresh = function (callback) {
+  this.client.getContainer(this, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.removeFile" id="apidoc.element.pkgcloud.storage.Container.prototype.removeFile">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>removeFile
+        <span class="apidocSignatureSpan">(file, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeFile = function (file, callback) {
+  this.client.removeFile(this.name, file, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `client.getContainer(containerName, function (err, container) { })`
+
+### File
+* `client.upload(options)`
+* `client.download(options, function (err) { })`
+* `client.getFiles(container, function (err, files) { })`
+* `client.getFile(container, file, function (err, server) { })`
+* `client.<span class="apidocCodeKeywordSpan">removeFile</span>(container, file, function (err) { })`
+
+Both the `.upload(options)` and `.download(options)` have had **careful attention paid to make sure they are pipe and stream capable
+:**
+
+### Upload a File
+``` js
+var pkgcloud = require('pkgcloud'),
+    fs = require('fs');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.Container.prototype.upload" id="apidoc.element.pkgcloud.storage.Container.prototype.upload">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.Container.prototype.</span>upload
+        <span class="apidocSignatureSpan">(file, local, options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upload = function (file, local, options, callback) {
+  this.client.upload(this.name, file, local, options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+### Container
+* `client.getContainers(function (err, containers) { })`
+* `client.createContainer(options, function (err, container) { })`
+* `client.destroyContainer(containerName, function (err) { })`
+* `client.getContainer(containerName, function (err, container) { })`
+
+### File
+* `client.<span class="apidocCodeKeywordSpan">upload</span>(options)`
+* `client.download(options, function (err) { })`
+* `client.getFiles(container, function (err, files) { })`
+* `client.getFile(container, file, function (err, server) { })`
+* `client.removeFile(container, file, function (err) { })`
+
+Both the `.upload(options)` and `.download(options)` have had **careful attention paid to make sure they are pipe and stream capable
+:**
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.storage.File" id="apidoc.module.pkgcloud.storage.File">module pkgcloud.storage.File</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File.File" id="apidoc.element.pkgcloud.storage.File.File">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.</span>File
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">File = function (client, details) {
+  model.Model.call(this, client, details);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File.super_" id="apidoc.element.pkgcloud.storage.File.super_">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.File.</span>super_
+        <span class="apidocSignatureSpan">(client, details)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">super_ = function (client, details) {
+  events.EventEmitter2.call(this, { delimiter: '::', wildcard: true });
+  this.client = client;
+
+  if (details) {
+    this._setProperties(details);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.pkgcloud.storage.File.prototype" id="apidoc.module.pkgcloud.storage.File.prototype">module pkgcloud.storage.File.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File.prototype.download" id="apidoc.element.pkgcloud.storage.File.prototype.download">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.File.prototype.</span>download
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">download = function (options, callback) {
+  this.client.download(options, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `client.getContainers(function (err, containers) { })`
+* `client.createContainer(options, function (err, container) { })`
+* `client.destroyContainer(containerName, function (err) { })`
+* `client.getContainer(containerName, function (err, container) { })`
+
+### File
+* `client.upload(options)`
+* `client.<span class="apidocCodeKeywordSpan">download</span>(options, function (err) { })`
+* `client.getFiles(container, function (err, files) { })`
+* `client.getFile(container, file, function (err, server) { })`
+* `client.removeFile(container, file, function (err) { })`
+
+Both the `.upload(options)` and `.download(options)` have had **careful attention paid to make sure they are pipe and stream capable
+:**
+
+### Upload a File
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.pkgcloud.storage.File.prototype.remove" id="apidoc.element.pkgcloud.storage.File.prototype.remove">
+        function <span class="apidocSignatureSpan">pkgcloud.storage.File.prototype.</span>remove
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (callback) {
+  this.client.removeFile(this.containerName, this.name, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
